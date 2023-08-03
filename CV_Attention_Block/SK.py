@@ -1,9 +1,10 @@
 import torch
 from torch import nn
 from collections import OrderedDict
+# https://blog.csdn.net/CharmsLUO/article/details/109784124?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522169107338416800226558164%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=169107338416800226558164&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-109784124-null-null.142^v92^koosearch_v1&utm_term=SK%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6&spm=1018.2226.3001.4187
 
 class SK_Attention(nn.Module):
-
+    #   SK注意力机制
     def __init__(self, c1, kernel=[1, 3, 5, 7], redution=16, guoups=1, L=32):
         super(SK_Attention, self).__init__()
         self.d = max(L, c1 // redution)
